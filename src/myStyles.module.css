@@ -1,0 +1,11 @@
+@font-face {
+  font-family: "Quentin"; /* Replace with the actual font name from the file (e.g., Quentin) */
+  src: url("../public/fonts/QuentinFont/Quentin.ttf") format("truetype"); /* Reference the font file directly */
+  font-weight: 400; /* Optional: Specify font weight */
+  font-style: normal; /* Optional: Specify font style */
+}
+
+/* In myStyles.module.css */
+.heading {
+  font-family: "Quentin", sans-serif; /* Fallback for browsers that don't support the custom font */
+}
