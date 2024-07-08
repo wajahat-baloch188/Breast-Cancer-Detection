@@ -2,14 +2,15 @@ import Image from "next/image";
 import heroImg from "../../public/images/heroImg.png";
 import Link from "next/link";
 import News from "./components/News";
-import CancerFighter from "./components/cancerFighter";
+// import Testimonials from "./components/Testimonials";
+
 
 export default function Home() {
   return (
     <>
-      <div className="flex flex-col md:flex-row h-[90vh] w-full justify-center items-center px-4 md:px-10">
+      <div className="flex flex-col md:flex-row h-[90vh] w-full justify-center items-center px-4 md:px-10  bg-white">
         <div className="w-full md:w-[45%] h-full flex flex-col justify-center items-center md:p-8">
-          <h1 className="text-2xl md:text-7xl font-semibold text-center mb-7">
+          <h1 className="text-2xl md:text-7xl text-pink-600 font-semibold text-center mb-7">
             Breast Cancer Detection and Prediction
           </h1>
           <div className="flex flex-row md:flex-row items-center gap-2 md:gap-4">
@@ -46,11 +47,13 @@ export default function Home() {
         <News />
       </div>
 
-      <div className="h-[100vh]">
-        <h1 className="text-center text-5xl font-bold my-4">Cancer Fighter</h1>
+      {/* <div className="h-[100vh]">
+        <h1 className="text-center text-5xl font-bold my-4">Testimonials</h1>
 
-        <CancerFighter />
-      </div>
+        <Testimonials />
+      </div> */}
+
+     
     </>
   );
 }

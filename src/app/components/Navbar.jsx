@@ -1,6 +1,5 @@
 "use client";
 import React, { useState } from "react";
-import { FaShoppingBag } from "react-icons/fa";
 
 import {
   Box,
@@ -38,7 +37,7 @@ const Navbar = () => {
   const { isOpen, onOpen, onClose } = useDisclosure();
 
   return (
-    <div className="px-4 md:px-10 bg-white">
+    <div className="px-4 md:px-10 bg-white text-black">
       {/* Main Navbar */}
       <nav className="bg-white px-4 py-2">
         <div className="flex h-16 items-center justify-between">
@@ -78,16 +77,16 @@ const Navbar = () => {
           {/* Buttons */}
           <div className="hidden md:flex items-center gap-2 md:gap-4">
             <Link
-              href="/prediction"
+              href="/signIn"
               className="bg-pink-500 py-2 px-4 rounded-lg text-white"
             >
-              Prediction
+              Sign In
             </Link>
             <Link
-              href="/detection"
+              href="/signUp"
               className="bg-pink-500 py-2 px-4 rounded-lg text-white"
             >
-              Detection
+              Sign up
             </Link>
           </div>
 
@@ -145,14 +144,14 @@ const Navbar = () => {
               ))}
             </List>
             <div className="mt-9 flex flex-col space-y-4">
-              <Link href="/detection" passHref>
+              <Link href="./auth/login" passHref>
                 <a className="w-full bg-pink-500 py-3 text-lg rounded-lg text-white text-center flex justify-center">
-                  Detection
+                  Login
                 </a>
               </Link>
-              <Link href="/prediction" passHref>
+              <Link href="./auth/register" passHref>
                 <a className="w-full bg-pink-500 py-3 text-lg rounded-lg text-white text-center flex justify-center">
-                  Prediction
+                  Sign Up
                 </a>
               </Link>
             </div>

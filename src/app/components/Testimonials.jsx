@@ -3,9 +3,8 @@
 import { useState, useRef, useEffect } from "react";
 import Image from "next/image";
 import { Transition } from "@headlessui/react";
-import PropTypes from "prop-types";
 
-function CancerFighter() {
+function Testimonials() {
   const testimonialsRef = useRef(null);
   const [active, setActive] = useState(0);
   const [autorotate, setAutorotate] = useState(true);
@@ -31,7 +30,6 @@ function CancerFighter() {
       name: "Testimonial name",
       role: "Testimonial role",
     },
-
     // Add more testimonials as needed
   ]);
 
@@ -43,7 +41,7 @@ function CancerFighter() {
       );
     }, autorotateTiming);
     return () => clearInterval(interval);
-  }, [active, autorotate]);
+  }, [active, autorotate, testimonials.length]);
 
   const heightFix = () => {
     if (testimonialsRef.current && testimonialsRef.current.parentElement) {
@@ -77,7 +75,7 @@ function CancerFighter() {
                   className="relative top-11 left-1/2 -translate-x-1/2 rounded-full"
                   src={testimonial.img}
                   width={120}
-                  height={56}
+                  height={120}
                   alt={testimonial.name}
                 />
               </Transition>
@@ -138,15 +136,4 @@ function CancerFighter() {
   );
 }
 
-CancerFighter.propTypes = {
-  testimonials: PropTypes.arrayOf(
-    PropTypes.shape({
-      img: PropTypes.any.isRequired,
-      quote: PropTypes.string.isRequired,
-      name: PropTypes.string.isRequired,
-      role: PropTypes.string.isRequired,
-    })
-  ).isRequired,
-};
-
-export default CancerFighter;
+export default Testimonials;
